@@ -1,35 +1,42 @@
-# BazaarPay Web Automation With Playwright
+# Selenium WebDriver With Python
 
-**Playwright** enables reliable end-to-end testing for modern web apps.
+Selenium is a free and open-source automated testing suite for web applications across different browsers and
+platforms¹. It's not just a single tool but a set of different software tools each with a different approach to support
+test automation¹. It primarily includes four components:
 
-* Cross-browser. Playwright supports all modern rendering engines including Chromium, WebKit, and Firefox.
-* Cross-platform. Test on Windows, Linux, and macOS, locally or on CI, headless or headed.
-* Cross-language. Use the Playwright API in TypeScript, JavaScript, Python, .NET, Java.
-* Test Mobile Web. Native mobile emulation of Google Chrome for Android and Mobile Safari. The same rendering engine
-  works on your Desktop and in the Cloud.
-* Auto-wait. Playwright waits for elements to be actionable prior to performing actions. It also has a rich set of
-  introspection events. The combination of the two eliminates the need for artificial timeouts - the primary cause of
-  flaky tests.
-* Web-first assertions. Playwright assertions are created specifically for the dynamic web. Checks are automatically
-  retried until the necessary conditions are met.
-* Tracing. Configure test retry strategy, capture execution trace, videos, screenshots to eliminate flakes.
-* Browsers run web content belonging to different origins in different processes. Playwright is aligned with the modern
-  browsers architecture and runs tests out-of-process. This makes Playwright free of the typical in-process test runner
-  limitations. Multiple everything. Test scenarios that span multiple tabs, multiple origins and multiple users. Create
-  scenarios with different contexts for different users and run them against your server, all in one test.
-* Trusted events. Hover elements, interact with dynamic controls, produce trusted events. Playwright uses real browser
-  input pipeline indistinguishable from the real user. Test frames, pierce Shadow DOM. Playwright selectors pierce
-  shadow DOM and allow entering frames seamlessly.
-* Browser contexts. Playwright creates a browser context for each test. Browser context is equivalent to a brand new
-  browser profile. This delivers full test isolation with zero overhead. Creating a new browser context only takes a
-  handful of milliseconds.
-* Log in once. Save the authentication state of the context and reuse it in all the tests. This bypasses repetitive
-  log-in operations in each test, yet delivers full isolation of independent tests.
-* Codegen. Generate tests by recording your actions. Save them into any language.
-* Playwright inspector. Inspect page, generate selectors, step through the test execution, see click points, explore
-  execution logs.
-* Trace Viewer. Capture all the information to investigate the test failure. Playwright trace contains test execution
-  screencast, live DOM snapshots, action explorer, test source, and many more.
+1. Selenium Integrated Development Environment (IDE)
+2. Selenium Remote Control (RC)
+3. WebDriver
+4. Selenium Grid¹
+
+On the other hand, Selenium WebDriver is a component of the Selenium suite that provides a programming interface to
+control a web browser through a program¹. It fits in the same role as Selenium-RC did and has incorporated the original
+1.x bindings and included the WebDriver API¹. It refers to both the language bindings and the implementations of the
+individual browser controlling code¹.
+
+Here are some key differences between Selenium and Selenium WebDriver:
+
+- WebDriver is faster than Selenium RC because of its simpler architecture³.
+- WebDriver directly talks to the browser while Selenium RC needs the help of the RC Server in order to do so³.
+- WebDriver's API is more concise than Selenium RC's³.
+- WebDriver can support Html Unit while Selenium RC cannot³.
+- WebDriver overcomes the limitation of Selenium RC's Single Host origin policy¹.
+
+Source: Conversation with Bing, 9/25/2023
+
+1. What Is Selenium And What Is WebDriver? - Stack
+   Overflow. https://stackoverflow.com/questions/54459701/what-is-selenium-and-what-is-webdriver.
+2. Difference between Selenium RC and WebDriver - Stack
+   Overflow. https://stackoverflow.com/questions/11535950/difference-between-selenium-rc-and-webdriver.
+3. Difference between Selenium RC and Selenium
+   Webdriver. https://www.geeksforgeeks.org/difference-between-selenium-rc-and-selenium-webdriver/.
+4. Selenium IDE vs. WebDriver: Key Differences - Blazemeter. https://www.blazemeter.com/blog/selenium-ide-vs-webdriver.
+
+WebDriver itself is a W3C standard, and the Selenium project is one of the most popular implementations. WebDriver can
+handle every type of web UI interaction such as clicking, typing and scraping text.
+
+Many people treat “Selenium WebDriver” as almost synonymous with web UI testing.
+Selenium releases WebDriver packages in many popular programming languages.
 
 # Development
 
