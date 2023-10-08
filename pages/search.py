@@ -21,5 +21,6 @@ class DuckDuckGoSearchPage:
 
     def search_value(self, phrase: str):
         search_input: WebElement = self._explicit_wait.until(
-            expected_conditions.visibility_of_element_located(self._search_input_field))
+            expected_conditions.visibility_of_element_located(self._search_input_field)
+        )
         search_input.send_keys(phrase + Keys.RETURN)

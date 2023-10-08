@@ -1,5 +1,6 @@
-from pages.search import DuckDuckGoSearchPage
 from pytest import mark
+
+from pages.search import DuckDuckGoSearchPage
 
 
 @mark.search
