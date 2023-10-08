@@ -4,10 +4,10 @@ from selenium import webdriver
 
 
 @fixture
-def create_browser(get_data_from_config):
-    browser_name = get_data_from_config['browser']
-    implicit_wait_state = get_data_from_config['active_implicit_wait']
-    implicit_wait = get_data_from_config['implicit_wait']
+def browser(config):
+    browser_name = config['browser']
+    implicit_wait_state = config['active_implicit_wait']
+    implicit_wait = config['implicit_wait']
     browsers = {
         'firefox': webdriver.Firefox,
         'chrome': webdriver.Chrome,
