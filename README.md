@@ -56,7 +56,7 @@ pipenv install selenium
 ### Test Runner (Unit Test Framework)
 
 ```shell
-pipenv install pytest 
+pipenv install pytest
 ```
 
 ### Manage Logs
@@ -81,4 +81,38 @@ pipenv install pytest-html
 
 ```shell
 pipenv install selenium pytest python-json-logger pytest-html pytest-xdist
+```
+
+## Static Testing
+
+### Install & Verify pre-commit
+
+```shell
+pipenv install pre-commit
+```
+
+```shell
+pre-commit --version
+```
+
+### Create Sample Config
+
+```shell
+pre-commit sample-config
+```
+
+### Run pre-commit
+
+```shell
+pre-commit run
+```
+
+```shell
+pre-commit run --all-files
+```
+
+### Create pylint File
+
+```shell
+pylint --generate-rcfile >.pylintrc
 ```
