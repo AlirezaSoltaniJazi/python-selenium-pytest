@@ -24,4 +24,4 @@ def test_duck_duck_go_search(browser):
     # Assert
     assert any(phrase in title for title in link_titles)
     assert phrase == search_input_text
-    assert True == page_title.startswith(phrase)
+    assert page_title.startswith(phrase)
