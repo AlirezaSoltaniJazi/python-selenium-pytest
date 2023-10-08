@@ -10,6 +10,7 @@ python-json-logger = "*"
 pytest-html = "*"
 pytest-xdist = "*"
 pre-commit = "*"
+assertpy = "*"
 
 [dev-packages]
 

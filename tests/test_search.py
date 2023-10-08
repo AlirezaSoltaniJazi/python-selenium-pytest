@@ -1,3 +1,4 @@
+from assertpy import assert_that
 from pytest import mark
 
 from pages.result import DuckDuckGoResultPage
@@ -6,12 +7,12 @@ from pages.search import DuckDuckGoSearchPage
 
 @mark.search
 def test_duck_duck_go_search(browser):
-    # Arrange
+    # Arrange Section
     search = DuckDuckGoSearchPage(browser, 10)
     result = DuckDuckGoResultPage(browser, 10)
     phrase = 'Alireza Soltani Jazi'
 
-    # Act
+    # Act Section
     # Give duckduckgo page is displayed
     search.load_search_page()
     # When the user searches for a "word"
@@ -21,7 +22,9 @@ def test_duck_duck_go_search(browser):
     search_input_text = result.get_search_input_text()
     page_title = result.get_page_title()
 
-    # Assert
-    assert any(phrase in title for title in link_titles)
-    assert phrase == search_input_text
-    assert page_title.startswith(phrase)
+    # Assert Section
+    assert_that(any(phrase in title for title in link_titles), 'link titles').is_true()
+
+    assert_that(search_input_text, 'search input text').is_equal_to(phrase)
+
+    assert_that(page_title, 'page title').starts_with(phrase)
