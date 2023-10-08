@@ -122,4 +122,9 @@ pre-commit run --all-files
 
 ```shell
 pylint --generate-rcfile >.pylintrc
+
+```
+### Assertion
+```shell
+pipenv install assertpy
 ```
