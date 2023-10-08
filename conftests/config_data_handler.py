@@ -7,7 +7,7 @@ from utils.project_directory_finder import get_project_directory
 
 
 @fixture(scope='session')
-def get_data_from_config() -> dict:
+def get_data_from_config():
     directory = get_project_directory()
     file_address = directory + '/config.json'
     with open(file_address, encoding='utf-8') as file_name:
