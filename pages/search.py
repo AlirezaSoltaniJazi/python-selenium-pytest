@@ -19,7 +19,7 @@ class DuckDuckGoSearchPage:
     def load_search_page(self) -> None:
         self._browser.get(self._URL)
 
-    def search_value(self, phrase: str):
+    def search_value(self, phrase: str) -> None:
         search_input: WebElement = self._explicit_wait.until(
             expected_conditions.visibility_of_element_located(self._SEARCH_INPUT_FIELD)
         )

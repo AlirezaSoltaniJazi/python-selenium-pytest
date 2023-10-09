@@ -16,7 +16,7 @@ class DuckDuckGoResultPage:
         self._browser = browser
         self._explicit_wait = WebDriverWait(browser, explicit_wait)
 
-    def get_link_titles(self):
+    def get_link_titles(self) -> list[str]:
         links: list[WebElement] = self._explicit_wait.until(
             expected_conditions.visibility_of_all_elements_located(self._RESULT_LINKS)
         )
@@ -24,7 +24,7 @@ class DuckDuckGoResultPage:
         LOGGER.info('Result Titles', extra={'Titles': titles})
         return titles
 
-    def get_search_input_text(self):
+    def get_search_input_text(self) -> str:
         search_input: WebElement = self._explicit_wait.until(
             expected_conditions.visibility_of_element_located(self._SEARCH_INPUT)
         )
@@ -32,7 +32,7 @@ class DuckDuckGoResultPage:
         LOGGER.info('Search Input Data', extra={'Text': search_input_text})
         return search_input_text
 
-    def get_page_title(self):
+    def get_page_title(self) -> str:
         page_title: str = self._browser.title
         LOGGER.info('Page Title', extra={'Title': page_title})
         return page_title
