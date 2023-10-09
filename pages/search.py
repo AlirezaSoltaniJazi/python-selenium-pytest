@@ -7,8 +7,6 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 
 class DuckDuckGoSearchPage:
-    # Arrange Data
-    _URL = 'https://www.duckduckgo.com'
     # Arrange Locators
     _SEARCH_INPUT_FIELD = (By.ID, 'searchbox_input')
 
@@ -16,8 +14,8 @@ class DuckDuckGoSearchPage:
         self._browser = browser
         self._explicit_wait = WebDriverWait(browser, explicit_wait)
 
-    def load_search_page(self) -> None:
-        self._browser.get(self._URL)
+    def load_search_page(self, url: str) -> None:
+        self._browser.get(url)
 
     def search_value(self, phrase: str) -> None:
         search_input: WebElement = self._explicit_wait.until(
