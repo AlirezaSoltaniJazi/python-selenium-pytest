@@ -17,8 +17,11 @@ def config():
     browser_name = config_data['browser']
     implicit_wait_state = config_data['active_implicit_wait']
     implicit_wait = config_data['implicit_wait']
-    if browser_name not in ['headless chrome', 'firefox', 'chrome', 'safari', 'edge']:
-        raise TypeError(f'Browser {browser_name} is not supported!')
+    supported_browsers = ['headless chrome', 'firefox', 'chrome', 'safari', 'edge']
+    if browser_name not in supported_browsers:
+        raise TypeError(
+            f'Browser {browser_name} is not supported, It must be one of: {supported_browsers}'
+        )
     if not isinstance(implicit_wait_state, bool):
         raise TypeError(
             f'The implicit wait state {implicit_wait_state} must be a boolean'
