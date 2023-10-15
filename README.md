@@ -1,4 +1,4 @@
-# Selenium WebDriver With Python
+# Selenium WebDriver With POM Pattern (Python and pytest)
 
 Selenium is a free and open-source automated testing suite for web applications across different browsers and
 platforms¹. It's not just a single tool but a set of different software tools each with a different approach to support
